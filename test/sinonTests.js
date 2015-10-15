@@ -2,6 +2,7 @@
 
 var chai = require('chai');
 var sinon = require('sinon');
+var assert = require('assert');
 var expect = chai.expect;
 
 chai.should();
@@ -12,6 +13,7 @@ describe('sinon tests', function() {
 
   beforeEach(function() {
     student = {
+      courses: new Array('Default'),
       dropClass: function(classId, cb) {
         //do stuff
         if (!!cb.dropClass) {
@@ -19,6 +21,9 @@ describe('sinon tests', function() {
         } else {
           cb();
         }
+      },
+      addCourse: function(courseName) {
+        console.log(this.courses.length);
       }
     };
 
@@ -53,6 +58,11 @@ describe('sinon tests', function() {
       sinon.spy(schedule, 'dropClass');
       student.dropClass(1, schedule);
       schedule.dropClass.called.should.be.true;
+    });
+
+    it('Should add the course for the student', function() {
+      student.addCourse('teste1');
+      assert.ok(student.courses.length > 0);
     });
   });
 

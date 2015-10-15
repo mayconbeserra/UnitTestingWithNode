@@ -8,3 +8,5 @@ This project is my fist steps in terms of unit testing for NODE.
 
 + Mocha & Chai (It's a library for unit testing (NodeJS))
 + Sinon (Mocking library)
++ Stubs
++ Gulp

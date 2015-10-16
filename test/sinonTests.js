@@ -24,12 +24,22 @@ describe('sinon tests', function() {
       },
       addCourse: function(courseName) {
         console.log(this.courses.length);
+      },
+      addClass: function(schedule) {
+        if (!schedule.classIsFull()) {
+          return true;
+        } else {
+          return false;
+        }
       }
     };
 
     schedule = {
       dropClass: function() {
         console.log('class dropped');
+      },
+      classIsFull: function() {
+        return true;
       }
     };
   });
@@ -67,11 +77,20 @@ describe('sinon tests', function() {
   });
 
   describe('student with stubs', function() {
+
     it('should call a stubbed method', function() {
       var stub = sinon.stub(schedule);
 
       student.dropClass(1, stub.dropClass);
       stub.dropClass.called.should.be.true;
+    });
+
+    it('should return true when the class is not full', function() {
+      var stub = sinon.stub(schedule);
+      var returnVal = student.addClass(schedule);
+
+      stub.classIsFull.returns(false);
+      returnVal.should.be.true;
     });
   });
 

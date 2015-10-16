@@ -66,4 +66,13 @@ describe('sinon tests', function() {
     });
   });
 
+  describe('student with stubs', function() {
+    it('should call a stubbed method', function() {
+      var stub = sinon.stub(schedule);
+
+      student.dropClass(1, stub.dropClass);
+      stub.dropClass.called.should.be.true;
+    });
+  });
+
 });

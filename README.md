@@ -16,3 +16,4 @@ This project is my fist steps in terms of unit testing for NODE.
 
 + Testing business logic (e.g. testBusinessLogic folder)
 + Testing IO (e.g. testIO folder)
++ Testing using Mocks (e.g. testMocks folder)

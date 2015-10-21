@@ -15,3 +15,4 @@ This project is my fist steps in terms of unit testing for NODE.
 # Subjects studies
 
 + Testing business logic (e.g. testBusinessLogic folder)
++ Testing IO (e.g. testIO folder)

@@ -4,15 +4,6 @@ var uuid = require('uuid');
 
 function Student() {}
 
-function Student(info) {
-  var me = this;
-  console.log(Object);
-  console.log(info);
-  Object.keys(info).forEach(function(key) {
-    me[key] = info[key];
-  });
-}
-
 Student._load = function(studentId) {
   return new Student(DataLoader.getStudentSync(studentId));
 };

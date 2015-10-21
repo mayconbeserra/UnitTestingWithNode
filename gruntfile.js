@@ -11,7 +11,12 @@ module.exports = function(grunt) {
         options: {
           reporter: 'spec'
         },
-        src: ['test/**/*.js','testBusinessLogic/**/*.js', 'testIO/**/*.js']
+        src: [
+          'test/**/*.js',
+          'testBusinessLogic/**/*.js',
+          'testIO/**/*.js',
+          'TestPromises/**/*.js'
+        ]
       }
     },
     watch: {

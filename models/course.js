@@ -102,4 +102,8 @@ _p.showStudents = function () {
   return studentString;
 };
 
+_p.testNewMethod = function() {
+  return "";
+};
+
 module.exports = Course;

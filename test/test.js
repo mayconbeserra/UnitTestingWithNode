@@ -20,7 +20,7 @@ describe('isEven', function () {
 
   it('should return false whem number is odd', function(){
     expect(isEven(5)).to.be.false;
-  });
+  }); 
 });
 
 describe('add without setup/teardown', function() {

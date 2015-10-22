@@ -14,7 +14,7 @@ describe("Course Tests", function(){
   var courseCode = "UNTNJS";
   var courseDescription = "Learning how to create unit testing with node";
 
-  it('should save data correctly', function(){
+  it('should save data correctly', function() {
     var newCourse = course.create(courseName, courseCode, courseDescription);
 
     should.exist(newCourse.name);

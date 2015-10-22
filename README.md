@@ -18,3 +18,4 @@ This project is my fist steps in terms of unit testing for NODE.
 + Testing IO (e.g. testIO folder)
 + Testing using Mocks (e.g. testMocks folder)
 + Testing Promises (e.g. TestPromises folder)
++ Testing coverage (using istanbul library)
